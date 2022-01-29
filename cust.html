@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>customer screen</title>
+<script type="text/javascript">  
+  
+ function changetextbox() {  
+     alert(document.getElementById("otype").value);  
+if (document.getElementById("otype").value === "market")  
+  
+{      
+    document.getElementById("sdd").disabled = 'true';  
+  
+ } else {  
+  
+       document.getElementById("sdd").disabled = ''; }  
+  
+ } </script>  
+</head>
+<style>
+body {
+  background-image: url('');
+}
+.container {
+  height: 200px;
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+}
+</style>
+<body>
+
+<form action="/sample.php">
+<div class="container">
+  <div class="center">
+  <h1> Book order customer screen </h1>
+  <label for="ss">Search stock</label>
+  <select id="sstock" name="sstock">
+    <option value="">   </option>
+    <option value="">   </option>
+    <option value="">   </option>
+    <option value="">   </option>
+  </select> </br>
+  <label for="ot">Order type</label>
+  <select onchange="changetextbox();" id="otype">
+    <option value="limit"> limit  </option>
+    <option value="market"> market  </option>
+  </select> </br>
+
+  <label for="price">Price</label>
+  <input type="number" id="sdd" name="price" placeholder="enter price"><br>
+  <label for="quantity">Quantity</label>
+  <input type="number" id="quantity" name="quantity"><br>
+  <button> Place Order </button>
+</div>
+</div>
+</form>
+
+</body>
+</html>
+</body>
+</html>
